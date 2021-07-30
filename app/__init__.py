@@ -1,7 +1,6 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
-import os
-from flask import Flask, render_template, request
+from flask import Flask
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from config import Config

@@ -1,12 +1,11 @@
 {% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
 
 {% block content %}
-    <h1>Flask Mail Sending App</h1>
-    <h1>{{ success }}</h1>
-    <form action="{{ url_for('contact') }}" method="post">
-        <input type="email" name="email" placeholder="Email" required id="">
-        <input type="text" name="subject" placeholder="Subject" required id="">
-        <textarea name="message" id="" cols="30" rows="10" placeholder="Message Body" required></textarea>
-        <input type="submit" value="Send Message">
-    </form>
+    <h1>Contact Us</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
 {% endblock %}
