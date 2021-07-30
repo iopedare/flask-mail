@@ -5,7 +5,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, ".env"))
 
 class Config(object):
-    SECRET_KEY = "dev"
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     MAIL_SERVER = "smtp-mail.outlook.com"
     MAIL_PORT = 587
     MAIL_USE_TLS = True
